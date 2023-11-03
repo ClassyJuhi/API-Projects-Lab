@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="favicon" type="png/image" href="assets/night.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weatherApp">
+        <form>
+            <input type="search" name="" id="input" placeholder="Enter City Name">
+            <span id="search" class="material-symbols-outlined">search</span>
+        </form>
+        <div id="mainContent">
+            <img id="image" src="assets/sun.png" alt="">
+            <div id="temperature">22°c</div>
+            <div id="city">Delhi</div>
+        </div>
+        <div id="footer">
+            <div id="humidity">
+                <span class="material-symbols-outlined">humidity_percentage</span>
+                <div id="humidityData">50 %</div>
+            </div>
+            <div id="windSpeed">
+                <span class="material-symbols-outlined">air</span>
+                <div id="windData">5.66 km/h</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
