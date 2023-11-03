@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top,#ffdef2,#f2e2ff,#e2eeff,#ddfffc,#ffffe3);
+}
+#weatherApp{
+    width: 350px;
+    height: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    border-radius: 15px; 
+    animation: changebg 20s ease-in-out infinite;
+}
+@keyframes changebg {
+    0%{
+        background: linear-gradient(#e3c3ea,#c296d4,#9b65b8);        
+    }
+    20%{
+        background: linear-gradient(#dfdfde, #d7c6cf, #a2798f);
+    }
+    40%{
+        background: linear-gradient(#b2d8d8,#66b2b2,#008080);
+    }
+    60%{
+        background: linear-gradient(#f0f7da, #c9df8a,#77ab59);
+    }
+    80%{
+        background: linear-gradient(#cec6ff,#afb8ff,#6893ee);
+    }
+    100%{
+        background: linear-gradient(#d3eefa,#a9d4e7,#8abed6);
+    }
+}
+#weatherApp form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#weatherApp form input{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    background: linear-gradient(to top,	#c0bfc7,#d5d4dd,#e7e6ee,#f0eff7,#faf9ff);
+}
+#weatherApp form #search{
+    background: linear-gradient(to top,	#c0bfc7,#d5d4dd,#e7e6ee,#f0eff7,#faf9ff);
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#weatherApp #mainContent img{
+    width: 120px;
+    height: auto;
+    -ms-layout-grid: 20px 0;
+}
+#weatherApp #mainContent{
+    margin: 50px 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: gray;
+    text-align: center;
+}
+#weatherApp #mainContent #temperature{
+    margin-top: 20px;
+}
+#weatherApp #footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#footer #humidity, #footer #windSpeed{
+    display: flex;
+    justify-content: space-around;
+    color: #faf9ff;
+}
+#footer span{
+    margin-right: 10px;
+}
+#humidityData, #windData{
+    position: relative;
+    font-size: 20px;
+}
+#humidityData::after{
+    content: 'Humidity';
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    font-size: 12px;
+}
+#windData::after{
+    content: 'Wind Speed';
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    font-size: 12px;
+}
